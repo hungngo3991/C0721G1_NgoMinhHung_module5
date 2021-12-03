@@ -1,0 +1,17 @@
+body {
+    padding-top: 56px;
+}
+
+.jumbotron {
+    background-color: white;
+}
+.btn-primary,.btn-secondary{
+    background-color: white;
+    color: blue;
+    border-color: blue;
+}
+
+
+#contact {
+    background-color: rgb(0, 174, 255);
+}
