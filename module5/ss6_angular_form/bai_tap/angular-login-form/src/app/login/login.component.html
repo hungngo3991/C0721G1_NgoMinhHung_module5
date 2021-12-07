@@ -1,0 +1,42 @@
+<h2 style="text-align: center">Login Form</h2>
+
+<div class="container-fluid" style="width: 30%">
+
+  <form [formGroup]="lForm" (ngSubmit)="onSubmit(lForm)" novalidate>
+    <div class="row">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" aria-describedby="emailErr" formControlName="email">
+      <div id="emailErr" class="form-text text-danger" *ngIf="email.invalid && email.touched">
+        <div [hidden]="!email.errors.required">
+          Email is required!!!
+        </div>
+        <div [hidden]="!email.errors.email">
+          Email invalidate!!!
+        </div>
+      </div>
+
+    </div>
+      <div class="row">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" aria-describedby="passwordErr"
+               formControlName="password">
+        <div id="passwordErr" class="form-text text-danger"
+             *ngIf="password.invalid && password.touched">
+          <div [hidden]="!password.errors.required">
+            Password is required!!!
+          </div>
+          <div [hidden]="!password.errors.minlength">
+            The minimum length of the password should be 6!!!
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-top: 1%">
+        <button type="submit" class="btn btn-primary" [disabled]="lForm.invalid">Submit</button>
+
+      </div>
+
+  </form>
+</div>
+
