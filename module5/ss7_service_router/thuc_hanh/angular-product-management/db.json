@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "name": "Blackberry 12",
+      "price": 12000000,
+      "description": "Old",
+      "category": {},
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Samsung Pro",
+      "price": 14000000,
+      "description": "Old"
+    },
+    {
+      "id": 654,
+      "name": "Samsung Galaxy Plus",
+      "price": 6546464645,
+      "description": "fsdfsd",
+      "category": 1
+    },
+    {
+      "id": 45353453,
+      "name": "Samsung Note 10",
+      "price": 20000000,
+      "description": "new",
+      "category": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Samsung"
+    },
+    {
+      "id": 2,
+      "name": "Nokia"
+    },
+    {
+      "id": 3,
+      "name": "Oppo"
+    },
+    {
+      "id": 4,
+      "name": "Blackberry"
+    }
+  ]
+}

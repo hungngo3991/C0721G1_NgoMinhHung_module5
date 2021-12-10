@@ -1,12 +1,13 @@
 <h1>Danh sách sản phẩm</h1>
 <a routerLink="/product/create">Tạo mới sản phẩm</a>
-<table>
+<table class="table">
   <tr>
     <td>STT</td>
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
-    <td colspan="2"></td>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
   <tr *ngFor="let product of products; index as i">
     <td>{{i + 1}}</td>

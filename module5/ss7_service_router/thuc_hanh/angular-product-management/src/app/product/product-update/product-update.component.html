@@ -1,10 +1,6 @@
 <h1>Cập nhật thông tin sản phẩm</h1>
-<form [formGroup]="productForm" (ngSubmit)="updateProduct(id)">
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="updateProduct(id)" novalidate>
   <table>
-    <tr>
-      <td>Mã sản phẩm:</td>
-      <td><input type="number" formControlName="id"></td>
-    </tr>
     <tr>
       <td>Tên sản phẩm:</td>
       <td><input type="text" formControlName="name"></td>
@@ -18,9 +14,17 @@
       <td><input type="text" formControlName="description"></td>
     </tr>
     <tr>
+      <td>Category Choice</td>
+      <td>
+        <select id="category" name="category" formControlName="category">
+          <option *ngFor="let cate of categories" [ngValue]="cate.id">{{cate.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
       <td></td>
       <td>
-        <button>Cập nhật</button>
+        <button>Update</button>
       </td>
     </tr>
   </table>
