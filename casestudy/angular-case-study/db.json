@@ -46,8 +46,8 @@
       "email": "hang@gmail.com",
       "address": "Sài Gòn",
       "customerType": {
-        "id": 2,
-        "name": "Platinium"
+        "id": 3,
+        "name": "Gold"
       }
     },
     {
@@ -136,16 +136,16 @@
     },
     {
       "id": "KH-0009",
-      "name": "Nguyễn Thị Thu",
-      "birthday": "1990/07/07",
+      "name": "Nguyễn Thị Thu Thảo",
+      "birthday": "2021-12-04",
       "gender": "0",
       "idCard": "206565765",
       "phone": "0905456456",
-      "email": "thu@gmail.com",
-      "address": "Vinh",
+      "email": "thuthao@gmail.com",
+      "address": "Đà Nẵng",
       "customerType": {
-        "id": 5,
-        "name": "Member"
+        "id": 1,
+        "name": "Diamond"
       }
     }
   ]

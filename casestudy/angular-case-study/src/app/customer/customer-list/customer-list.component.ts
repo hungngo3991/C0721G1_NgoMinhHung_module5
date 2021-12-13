@@ -15,7 +15,9 @@ export class CustomerListComponent implements OnInit {
   constructor(private customerService: CustomerService,
               private modalService: NgbModal) {
   }
+
   p = 1;
+  term: any;
 
   customerList: Customer[] = [];
 
@@ -40,6 +42,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   // delete Modal
+
   open(content, videoId) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

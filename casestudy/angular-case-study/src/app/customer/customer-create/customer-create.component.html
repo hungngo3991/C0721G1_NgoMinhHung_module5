@@ -30,7 +30,7 @@
     </div>
     <div class="row">
       <label for="birthday" class="form-label">Birthday</label>
-      <input type="text" class="form-control" id="birthday" aria-describedby="birthdayErr"
+      <input type="date" class="form-control" id="birthday" aria-describedby="birthdayErr"
              formControlName="birthday">
       <div id="birthdayErr" class="form-text text-danger"
            *ngIf="birthday.invalid && birthday.touched">

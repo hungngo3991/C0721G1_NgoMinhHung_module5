@@ -45,15 +45,16 @@ export class CustomerEditComponent implements OnInit {
   getCustomer(id: string) {
     return this.customerService.findById(id).subscribe(customer => {
       this.customerForm.setValue(customer);
+      console.log(customer);
     });
   }
 
 
   updateCustomer(id: string) {
     const customer = this.customerForm.value;
-    customer.customerType = {
-      id: customer.customerType
-    };
+    // tslint:disable-next-line:no-unused-expression
+    customer.customerType;
+
     this.customerService.update(id, customer).subscribe(() => {
       this.router.navigate(['/customer/list']);
     }, error => {

@@ -1,3 +1,9 @@
+<form class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="term"
+         [ngModelOptions]="{standalone: true}" style="width: 20%">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
 <h1>Customer list</h1>
 <a routerLink="/customer/create">Create new customer</a>
 <table class="table table-hover table-striped">
@@ -20,7 +26,7 @@
   <tbody>
 
 
-  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 2, currentPage: p }; index as i">
+  <tr *ngFor="let customer of customerList |filter: term | paginate: { itemsPerPage: 2, currentPage: p }; index as i">
     <th>{{i + 1}}</th>
     <td>{{customer.id}}</td>
     <td>{{customer.name}}</td>
