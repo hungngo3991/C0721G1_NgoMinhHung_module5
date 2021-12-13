@@ -1,0 +1,66 @@
+<h1>Customer list</h1>
+<a routerLink="/customer/create">Create new customer</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Birhday</th>
+    <th>Gender</th>
+    <th>Id card</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Customer type</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+
+
+  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 2, currentPage: p }; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.birthday | date: 'dd-MM-yyyy'}}</td>
+    <td [ngSwitch]="customer.gender">
+      <span *ngSwitchCase="1">Male</span>
+      <span *ngSwitchCase="0">Female</span>
+    </td>
+    <td>{{customer.idCard}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.customerType.name}}</td>
+    <td>
+      <a [routerLink]="['/customer/edit', customer.id]">Edit</a>
+    </td>
+    <td>
+      <!--      <a [routerLink]="['/customer/delete', customer.id]">Delete</a>-->
+
+      <a title="Delete" (click)="open(content,customer.id)" href="javascript:void(0);">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+
+<!--delete Modal-->
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure to delete this?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancel</button>
+    <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
+  </div>
+</ng-template>

@@ -1,0 +1,152 @@
+{
+  "customerTypeList": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customerList": [
+    {
+      "id": "KH-0001",
+      "name": "Nguyễn Văn Hải",
+      "birthday": "1995-07-03",
+      "gender": "1",
+      "idCard": "201981034",
+      "phone": "0902345454",
+      "email": "hai@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      }
+    },
+    {
+      "id": "KH-0002",
+      "name": "Phạm Thị Hằng",
+      "birthday": "1992-04-04",
+      "gender": "0",
+      "idCard": "202269578",
+      "phone": "0903432345",
+      "email": "hang@gmail.com",
+      "address": "Sài Gòn",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      }
+    },
+    {
+      "id": "KH-0003",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0004",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0005",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0006",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0007",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0008",
+      "name": "Nguyễn Văn Dương",
+      "birthday": "1990/07/14",
+      "gender": "1",
+      "idCard": "207657656",
+      "phone": "0905456454",
+      "email": "duong@gmail.com",
+      "address": "48 Tran Phu",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": "KH-0009",
+      "name": "Nguyễn Thị Thu",
+      "birthday": "1990/07/07",
+      "gender": "0",
+      "idCard": "206565765",
+      "phone": "0905456456",
+      "email": "thu@gmail.com",
+      "address": "Vinh",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      }
+    }
+  ]
+}

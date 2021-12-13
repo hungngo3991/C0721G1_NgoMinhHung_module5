@@ -1,0 +1,132 @@
+<h2 style="text-align: center">Register form</h2>
+
+<div class="container-fluid" style="width: 30%">
+  <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()" novalidate>
+    <div class="row">
+      <label for="id" class="form-label">Id</label>
+      <input type="text" class="form-control" id="id" aria-describedby="idErr" formControlName="id">
+      <div id="idErr" class="form-text text-danger" *ngIf="id.invalid && id.touched">
+        <div [hidden]="!id.errors.required">
+          Id is required!!!
+        </div>
+        <div [hidden]="!id.errors.pattern">
+          Customer Code must be in the correct format: KH-XXXX (X is the number from 0 to 9)
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" aria-describedby="nameErr"
+             formControlName="name">
+      <div id="nameErr" class="form-text text-danger"
+           *ngIf="name.invalid && name.touched">
+        <div [hidden]="!name.errors.required">
+          Name is required!!!
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <label for="birthday" class="form-label">Birthday</label>
+      <input type="text" class="form-control" id="birthday" aria-describedby="birthdayErr"
+             formControlName="birthday">
+      <div id="birthdayErr" class="form-text text-danger"
+           *ngIf="birthday.invalid && birthday.touched">
+        <div [hidden]="!birthday.errors.required">
+          Birthday is required!!!
+        </div>
+        <div [hidden]="!birthday.errors.pattern">
+          Birthday must be in the correct format: YYYY/MM/DD!!!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label>Gender </label>
+      <input type="radio" value="1" name="gender" aria-describedby="genderErr"
+             formControlName="gender"> Male
+      <input type="radio" value="0" name="gender" aria-describedby="genderErr"
+             formControlName="gender"> Female
+      <div id="genderErr" class="form-text text-danger" *ngIf="gender.invalid && gender.touched">
+        Gender is required!!!
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <label for="idCard" class="form-label">Id Card</label>
+      <input type="text" class="form-control" id="idCard" aria-describedby="idCardErr"
+             formControlName="idCard">
+      <div id="idCardErr" class="form-text text-danger"
+           *ngIf="idCard.invalid && idCard.touched">
+        <div [hidden]="!idCard.errors.required">
+          Id Card is required!!!
+        </div>
+        <div [hidden]="!idCard.errors.pattern">
+          Id Card must be in the correct format: XXXXXXXXX or XXXXXXXXXXXX!!!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="text" class="form-control" id="phone" aria-describedby="phoneErr" formControlName="phone">
+      <div id="phoneErr" class="form-text text-danger" *ngIf="phone.invalid && phone.touched">
+        <div [hidden]="!phone.errors.required">
+          Phone is required!!!
+        </div>
+        <div [hidden]="!phone.errors.pattern">
+          Phone must be in the correct format: 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx!!!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" aria-describedby="emailErr" formControlName="email">
+      <div id="emailErr" class="form-text text-danger" *ngIf="email.invalid && email.touched">
+        <div [hidden]="!email.errors.required">
+          Email is required!!!
+        </div>
+        <div [hidden]="!email.errors.pattern">
+          Email must be in the correct format!!!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="address" aria-describedby="addressErr" formControlName="address">
+      <div id="addressErr" class="form-text text-danger" *ngIf="address.invalid && address.touched">
+        <div [hidden]="!address.errors.required">
+          Address is required!!!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <label for="customerType" class="form-label">Customer Type</label>
+      <select id="customerType" name="customerType" aria-describedby="customerTypeErr" formControlName="customerType">
+        <option value="" selected>---Select---</option>
+        <option *ngFor="let customerType of customerTypeList" [ngValue]="customerType">{{customerType.name}}</option>
+      </select>
+      <div id="customerTypeErr" class="form-text text-danger"
+           *ngIf="customerType.invalid && customerType.touched">
+        Customer Type is required!!!
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
+
+    </div>
+  </form>
+</div>
