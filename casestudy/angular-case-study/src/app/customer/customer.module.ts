@@ -9,12 +9,13 @@ import { CustomerDeleteComponent } from './customer-delete/customer-delete.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 
 
 
 @NgModule({
-  declarations: [CustomerListComponent, CustomerCreateComponent, CustomerEditComponent, CustomerDeleteComponent],
+  declarations: [CustomerListComponent, CustomerCreateComponent, CustomerEditComponent, CustomerDeleteComponent, CustomerDetailComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,

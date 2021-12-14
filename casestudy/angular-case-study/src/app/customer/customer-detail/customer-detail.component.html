@@ -1,0 +1,14 @@
+<h2>Detail Customer</h2>
+<div *ngIf="customer" class="container-fluid">
+<p>Id: {{this.customer.id}}</p>
+<p>Name: {{this.customer.name}}</p>
+<p>Birthday: {{this.customer.birthday}}</p>
+<p>Gender: {{this.customer.gender}}</p>
+<p>IdCard: {{this.customer.idCard}}</p>
+<p>Phone: {{this.customer.phone}}</p>
+<p>Email: {{this.customer.email}}</p>
+<p>Address: {{this.customer.address}}</p>
+<p>Customer Type: {{this.customer.customerType.name}}</p>
+</div>
+<a [routerLink]="['/customer/list']">Back</a>
+

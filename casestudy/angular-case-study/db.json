@@ -147,6 +147,62 @@
         "id": 1,
         "name": "Diamond"
       }
+    },
+    {
+      "id": "KH-0010",
+      "name": "Nguyễn Thị Thu Thảo",
+      "birthday": "2021-12-04",
+      "gender": "0",
+      "idCard": "206565765",
+      "phone": "0905456456",
+      "email": "thuthao@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": "KH-0011",
+      "name": "Nguyễn Thị Thu Thảo",
+      "birthday": "2021-12-04",
+      "gender": "0",
+      "idCard": "206565765",
+      "phone": "0905456456",
+      "email": "thuthao@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": "KH-0012",
+      "name": "Nguyễn Thị Thu Thảo",
+      "birthday": "2021-12-04",
+      "gender": "0",
+      "idCard": "206565765",
+      "phone": "0905456456",
+      "email": "thuthao@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": "KH-0013",
+      "name": "Nguyễn Thị Thu Thảo",
+      "birthday": "2021-12-04",
+      "gender": "0",
+      "idCard": "206565765",
+      "phone": "0905456456",
+      "email": "thuthao@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
     }
   ]
 }
